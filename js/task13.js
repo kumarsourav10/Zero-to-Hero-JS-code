@@ -7,3 +7,7 @@
 // Waiting:You should use the * operator.
 
 const product = 8 * 10;
+
+const product0 = 10*10;
+
+console.log(product, product0);
