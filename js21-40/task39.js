@@ -4,3 +4,7 @@
 // Waiting:The first item in myArray should be a string.
 // Waiting:The second item in myArray should be a number.
 
+// Only change code below this line
+const myArray = ["Sourav", 89];
+
+console.log(myArray)
