@@ -7,6 +7,7 @@
 // Waiting:You should use bracket notation.
 
 // Setup
+
 let firstLetterOfLastName = "";
 const lastName = "Lovelace";
 
