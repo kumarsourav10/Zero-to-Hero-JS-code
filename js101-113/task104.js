@@ -1,3 +1,4 @@
+// Profile Lookup
 // We have an array of objects representing different people in our contacts lists.
 
 // A lookUpProfile function that takes name and a property (prop) as arguments has been pre-written for you.
@@ -11,13 +12,13 @@
 // If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
 
 
-
 // lookUpProfile("Kristian", "lastName") should return the string Vos
-// Waiting:lookUpProfile("Sherlock", "likes") should return ["Intriguing Cases", "Violin"]
-// Waiting:lookUpProfile("Harry", "likes") should return an array
-// Waiting:lookUpProfile("Bob", "number") should return the string No such contact
-// Waiting:lookUpProfile("Bob", "potato") should return the string No such contact
-// Waiting:lookUpProfile("Akira", "address") should return the string No such property
+// Passed:lookUpProfile("Sherlock", "likes") should return ["Intriguing Cases", "Violin"]
+// Passed:lookUpProfile("Harry", "likes") should return an array
+// Passed:lookUpProfile("Bob", "number") should return the string No such contact
+// Passed:lookUpProfile("Bob", "potato") should return the string No such contact
+// Passed:lookUpProfile("Akira", "address") should return the string No such property
+
 
 // Setup
 const contacts = [
@@ -46,22 +47,17 @@ const contacts = [
       likes: ["JavaScript", "Gaming", "Foxes"],
     },
   ];
-  
   function lookUpProfile(name, prop) {
-    // Only change code below this line
-  function lookUpProfile(name, prop) {
-    for (let i = 0; i < contacts.length; i++) {
-      if (contacts[i].firstName === name) {
-        if (prop in contacts[i]) {
-          return contacts[i][prop];
+    for (let x = 0; x < contacts.length; x++) {
+      if (contacts[x].firstName === name) {
+        if (contacts[x].hasOwnProperty(prop)) {
+          return contacts[x][prop];
         } else {
           return "No such property";
         }
       }
     }
     return "No such contact";
-  }
-    // Only change code above this line
   }
   
   lookUpProfile("Akira", "likes");
