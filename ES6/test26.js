@@ -8,7 +8,10 @@
 
 
 
-// code is not given in this question  do by yourself
+// code is not given in this question  do by yourself but you have a sample 
+/*const myPromise = new Promise((resolve, reject) => {
+
+});*/
 
 // this is the ans. code
 const makeServerRequest = new Promise((resolve, reject) => {
