@@ -1,24 +1,23 @@
-// Use Capture Groups to Search and Replace
+// Remove Whitespace from Start and End
 
-// Write a regex fixRegex using three capture groups that will search for each word in the string one two three. Then update the replaceText variable to replace one two three with the string three two one and assign the result to the result variable. Make sure you are utilizing capture groups in the replacement string using the dollar sign ($) syntax.
+// Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
 
-// Passed:You should use .replace() to search and replace.
-// Failed:Your regex should change the string one two three to the string three two one
-// Passed:You should not change the last line.
-// Failed:fixRegex should use at least three capture groups.
-// Failed:replaceText should use parenthesized submatch string(s) (i.e. the nth parenthesized submatch string, $n, corresponds to the nth capture group).
+// Note: The String.prototype.trim() method would work here, but you'll need to complete this challenge using regular expressions.
 
-// This is the code 
+// Failed:result should be equal to the string Hello, World!
+// Passed:Your solution should not use the String.prototype.trim() method.
+// Passed:The result variable should not directly be set to a string
+// Failed:The value of the hello variable should not be changed.
+
+// This is the code
 /*
-let str = "one two three";
-let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
-let replaceText = "$3 $2 $1"; // Change this line
-let result = str.replace(fixRegex, "three two one");vs
+let hello = "   Hello, World!  ";
+let wsRegex = /change/; // Change this line
+let result = hello; // Change this line
 */
 
-// This is the code ans
+// this is the code ans
 
-let str = "one two three";
-let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
-let replaceText = "$1 $2 $3"; // Change this line
-let result = str.replace(fixRegex, "three two one");
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, ""); // Change this line
