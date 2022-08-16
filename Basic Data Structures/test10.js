@@ -23,6 +23,8 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 */
 
 // This is the code ans
+
+// This is Ans one
 function quickCheck(arr, elem) {
   // Only change code below this line
    if (arr.indexOf(elem) >=0) {
@@ -42,4 +44,18 @@ CODE EXPLANATION
 A simple if-statement can be used to check whether or not the value returned by the indexOf() function is less than 0.
 Once the value is discovered then you can return either true or false.
 demonstrates how a simple if-statement can return the correct result.
+*/
+
+// This is the ans 2
+
+/*
+function quickCheck(arr, elem) {
+  // Only change code below this line
+   return arr.indexOf(elem) >=0 ? true : false ;
+  // Only change code above this line
+  
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
 */
