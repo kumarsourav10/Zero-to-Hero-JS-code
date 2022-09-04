@@ -25,3 +25,12 @@ let beagle = new Dog("Snoopy");
 */
 
 // This is the code ans
+
+function Dog(name) {
+    this.name = name;
+  }
+  
+  let beagle = new Dog("Snoopy");
+  
+  // Only change code below this line4
+  Dog.prototype.isPrototypeOf(beagle)
