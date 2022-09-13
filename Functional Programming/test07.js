@@ -260,10 +260,11 @@ const watchList = [
   // Only change code below this line
   
   
-  let ratings = watchList.map(movie => {
+  let ratings = watchList.map(function movie(movie) {
     let refinedMovieData = {};
-    refinedMovieData["title"] = movie["Title"];
-    refinedMovieData["rating"] = movie["imdbRating"]
+  
+    refinedMovieData.title = movie.Title;
+    refinedMovieData.rating = movie.imdbRating
     return refinedMovieData
   })
   // Only change code above this line
