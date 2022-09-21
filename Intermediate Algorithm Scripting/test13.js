@@ -1,34 +1,49 @@
-
-// Sum All Primes
-
-
-// A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2 is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
-
-// Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
+// Everything Be True
 
 
 
+// Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
+
+// In other words, you are given an array collection of objects. The predicate pre will be an object property and you need to return true if its value is truthy. Otherwise, return false.
+
+// In JavaScript, truthy values are values that translate to true when evaluated in a Boolean context.
+
+// Remember, you can access object properties through either dot notation or [] notation.
 
 
-//                                                           Tests
+
+//                                                                              Tests
 
 
+// Waiting:truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot") should return false.
+// Waiting:truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "name") should return true.
+// Waiting:truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "role") should return false.
+// Waiting:truthCheck([{name: "Pikachu", number: 25, caught: 3}, {name: "Togepi", number: 175, caught: 1}], "number") should return true.
+// Waiting:truthCheck([{name: "Pikachu", number: 25, caught: 3}, {name: "Togepi", number: 175, caught: 1}, {name: "MissingNo", number: NaN, caught: 0}], "caught") should return false.
+// Waiting:truthCheck([{name: "Pikachu", number: 25, caught: 3}, {name: "Togepi", number: 175, caught: 1}, {name: "MissingNo", number: NaN, caught: 0}], "number") should return false.
+// Waiting:truthCheck([{name: "Quincy", username: "QuincyLarson"}, {name: "Naomi", username: "nhcarrigan"}, {name: "Camperbot"}], "username") should return false.
+// Waiting:truthCheck([{name: "freeCodeCamp", users: [{name: "Quincy"}, {name: "Naomi"}]}, {name: "Code Radio", users: [{name: "Camperbot"}]}, {name: "", users: []}], "users") should return true.
+// Waiting:truthCheck([{id: 1, data: {url: "https://freecodecamp.org", name: "freeCodeCamp"}}, {id: 2, data: {url: "https://coderadio.freecodecamp.org/", name: "CodeRadio"}}, {id: null, data: {}}], "data") should return true.
+// Waiting:truthCheck([{id: 1, data: {url: "https://freecodecamp.org", name: "freeCodeCamp"}}, {id: 2, data: {url: "https://coderadio.freecodecamp.org/", name: "CodeRadio"}}, {id: null, data: {}}], "id") should return false.
 
-// Waiting:sumPrimes(10) should return a number.
-// Waiting:sumPrimes(10) should return 17.
-// Waiting:sumPrimes(977) should return 73156.
 
-
-// This is the code 
+// This is the code
 
 /*
 
-function sumPrimes(num) {
-  return num;
+function truthCheck(collection, pre) {
+  return pre;
 }
 
-sumPrimes(10);
+truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot");
 
 */
 
 // This is the code ans
+
+function truthCheck(collection, pre) {
+  console.log(Boolean(collection[0[pre]]))
+  return collection.every(object =>object[pre]);
+  }
+  
+  truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot");
